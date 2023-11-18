@@ -1,9 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://dc0a3jfegfsiv"]
+[gd_scene load_steps=7 format=3 uid="uid://dc0a3jfegfsiv"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_22um4"]
 size = Vector2(100, 20)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_mq3l5"]
+
 [sub_resource type="BoxMesh" id="BoxMesh_3wxha"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y7s1d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ajywx"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_he7sq"]
 data = PackedVector3Array(50, 0, 10, -50, 0, 10, 50, 0, -10, -50, 0, 10, -50, 0, -10, 50, 0, -10)
@@ -16,6 +22,7 @@ mesh = SubResource("PlaneMesh_22um4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block_0"]
+shape = SubResource("BoxShape3D_mq3l5")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="block_0"]
 mesh = SubResource("BoxMesh_3wxha")
@@ -24,6 +31,7 @@ mesh = SubResource("BoxMesh_3wxha")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.44329, 0.5, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block_1"]
+shape = SubResource("BoxShape3D_y7s1d")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="block_1"]
 mesh = SubResource("BoxMesh_3wxha")
@@ -32,6 +40,7 @@ mesh = SubResource("BoxMesh_3wxha")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.16442, 0.5, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block_2"]
+shape = SubResource("BoxShape3D_ajywx")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="block_2"]
 mesh = SubResource("BoxMesh_3wxha")

@@ -28,3 +28,8 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+	
+	var collision = get_last_slide_collision()
+	if collision:
+		print("Collided with: ", collision.get_collider())
+		get_tree().quit()
